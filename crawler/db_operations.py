@@ -5,7 +5,7 @@ from psycopg2 import connect
 
 def get_connection():
     conn = connect(database='lyrics', user='lyrics', password='lyrics',
-                   host='localhost', port='5432')
+                   host='127.0.0.1', port='5432')
 
     return conn, conn.cursor()
 
