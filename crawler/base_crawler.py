@@ -693,6 +693,7 @@ class CrawlerType2(BaseCrawler):
         raw_html = open_request(complete_url, delayed=self.delay_request)
 
         for song_url, song in self.get_songs(raw_html):
+            print(song)
             self.task_queue.put(
                 {
                     'type': 3,
